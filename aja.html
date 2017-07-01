@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax练习</title>
+    <script src="js/jquery-3.2.1.js"></script>
+    <style>
+        .title{
+            font: bold 20px/1.5em "Microsoft YaHei" ;
+            color:#ff00ff;
+            top:0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="divtest">
+    <div class="title">
+        <span class="fl">我最爱吃的水果</span>
+        <span class="fr">
+                    <input id="btnShow" type="button" value="加载" />
+                </span>
+    </div>
+    <ul></ul>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $("#btnShow").bind("click", function () {
+            var $this = $(this);
+            $("ul")
+                .html("<img src='images/loading.gif' alt='233'/>")
+                .load("clock.html",function(){
+                    $this.attr("disabled", "true");
+                });
+        })
+    });
+</script>
+</body>
+</html>

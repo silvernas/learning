@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" charset="UTF-8">
+    <title>Canvas clock</title>
+    <style type="text/css">
+        .name{
+            text-align:center;
+            margin: 30px auto;
+            width: 200px;
+            font:bold 12px/1.5em "Microsoft YaHei";
+            font-size: 38px;
+        }
+        .main{
+            text-align:center;
+        }
+        #clock{
+            border: 1px solid #ccc;
+            background: cyan ;
+            z-index:-1;
+        }
+    </style>
+</head>
+<body>
+    <div class="name">画一个时钟</div>
+    <div class="main">
+        <canvas id="clock" height="400px" width="400px"></canvas>
+    </div>
+    <script src="js/clock.js"></script>
+</body>
+</html>
